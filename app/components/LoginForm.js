@@ -2,8 +2,7 @@
 import { Field, Form, Formik } from "formik";
 import { site } from "../config/index";
 import useMockLogin from "../hooks/useMockLogin";
-import { useRouter } from "next/router";
-import { revalidatePath } from "next/cache";
+import { useRouter } from "next/navigation";
 
 function LoginForm({ adminId, posterId }) {
   const router = useRouter();
@@ -29,7 +28,7 @@ function LoginForm({ adminId, posterId }) {
     };
 
     login(submitValues, formik);
-    revalidatePath("/connecting");
+    router.push("/connecting");
 
     // console.log(submitValues);
   };
