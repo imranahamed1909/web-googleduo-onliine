@@ -2,7 +2,6 @@
 import { useState } from "react";
 import Webcam from "react-webcam";
 import ReCAPTCHA from "react-google-recaptcha";
-import Login from "@/app/components/Login";
 import LoginForm from "@/app/components/LoginForm";
 
 export default function Home({params}) {
